@@ -1500,6 +1500,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
 │𝗕𝗼𝘁 : ${global.botname}
 │𝗢𝘄𝗻𝗲𝗿 𝗡𝗼: ${ownernumber}
+│𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲: Melvv
 │𝗣𝗿𝗲𝗳𝗶𝘅 :  NO-PREFIX 
 │𝗠𝗼𝗱𝗲 : ${XeonBotInc.public ? 'Public' : `Self`}
 │𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
@@ -1511,30 +1512,30 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 │𝗣𝗿𝗲𝗺𝗶𝘂𝗺 : ${isPrem ? '✅' : `❌`}
 │
 └─ 𝙏𝙄𝙈𝙀 𝙄𝙉𝙁𝙊 
-│𝗧𝗶??𝗲 : ${xtime}
+│𝗧𝗶𝗺𝗲 : ${xtime}
 │𝗗𝗮𝘁𝗲 : ${xdate}
 └┬────────────┈ ⳹
    │✑  Please Type The *MENU*
    │✑  Given *BELOW*
 ┌└─────────────┈ ⳹
-│❏.allmenu
-│❏.downloadmenu
-│❏.funmenu
-│❏.aimenu
-│❏.groupmenu
-│❏.ownermenu
-│❏.photooxymenu
-│❏.textpromenu
-│❏.ephoto360menu
-│❏.animemenu
-│❏.nsfwmenu
-│❏.randomphotomenu
-│❏.randomvideomenu
-│❏.stickermenu
-│❏.databasemenu
-│❏.stalkermenu
-│❏.bugmenu
-│❏.othermenu
+│❏.ALLMENU
+│❏.DOWNLOADMENU
+│❏.FUNMENU
+│❏.AIMENU
+│❏.GROUPMENU
+│❏.OWNERMENU
+│❏.PHOTOOXXMENU
+│❏.TEXTPROMENU
+│❏.EPHOTO360MENU
+│❏.ANIMEMENU
+│❏.NSFWMENU
+│❏.RANDOMPHOTOMENU
+│❏.RANDOMVIDEOMENU
+│❏.STICKERMENU
+│❏.DATABASEMENU
+│❏.STALKERMENU
+│❏.BUGMENU
+│❏.OTHERMENU
 └─────────────────┈ ⳹`
             let ments = [ownernya, me, mark]        
            XeonBotInc.sendMessage(from, { 
@@ -6110,10 +6111,6 @@ isForwarded: true,
                 XeonBotInc.sendMessage(m.chat, {caption: `${themeemoji} Title : ${result.title}\n${themeemoji} Category : ${result.type}\n${themeemoji} Detail : ${result.source}\n${themeemoji} Media Url : ${result.image[2] || result.image[1] || result.image[0]}`, image: { url: result.image[0] }} , { quoted: m })
             }
             break
-	case 'menu': {
-		menu=fs.readFileSync('./MELV.mp3')
-		XeonBotInc.sendMessage(from, menu, audio, { quoted: mek, mimtype:'audio/mp4, ptt:true })
-			break 
             case 'wikimedia': {
                 if (!text) return replygcxeon('Enter Query Title')
                 XeonStickWait()
