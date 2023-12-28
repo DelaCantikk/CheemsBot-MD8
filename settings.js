@@ -21,8 +21,8 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = ['6288976129942'] //ur owner number
-global.ownernomer = "6288976129942" //ur owner number2
+global.owner = ['6288211090997'] //ur owner number
+global.ownernomer = "6288211090997" //ur owner number2
 global.ownername = "🦄Melv" //ur owner name
 global.ytname = "YT: - " //ur yt chanel name
 global.socialm = "Instagram: rkanaii" //ur github or insta name
@@ -30,7 +30,7 @@ global.location = "Indonesia, Jakarta" //ur location
 
 //new
 global.botname = "Cheems Bot MD V8"
-global.ownernumber = '6288976129942'
+global.ownernumber = '6288211090997'
 global.ownername = 'Melv'
 global.ownerNumber = ["6288976129942@s.whatsapp.net"]
 global.ownerweb = "https://instagram/rkanaik"
