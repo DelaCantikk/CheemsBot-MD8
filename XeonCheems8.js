@@ -6110,6 +6110,10 @@ isForwarded: true,
                 XeonBotInc.sendMessage(m.chat, {caption: `${themeemoji} Title : ${result.title}\n${themeemoji} Category : ${result.type}\n${themeemoji} Detail : ${result.source}\n${themeemoji} Media Url : ${result.image[2] || result.image[1] || result.image[0]}`, image: { url: result.image[0] }} , { quoted: m })
             }
             break
+	case 'menu': {
+		menu=fs.readFileSync('./MELV.mp3')
+		XeonBotInc.sendMessage(from, menu, audio, { quoted: mek, mimtype:'audio/mp4, ptt:true })
+			break 
             case 'wikimedia': {
                 if (!text) return replygcxeon('Enter Query Title')
                 XeonStickWait()
