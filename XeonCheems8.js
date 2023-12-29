@@ -118,12 +118,12 @@ try {
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
         const groupMembers = m.isGroup ? groupMetadata.participants : ''
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
-        const isGroupAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
-    	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
+        const isGroupAdmins = m.isGroup ? groupAdmins.includes(m.sender) : true
+    	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : true
     	const isPrem = prem.includes(m.sender)
     	const isUser = xeonverifieduser.includes(sender)
     	const banUser = await XeonBotInc.fetchBlocklist()
-        const isBanned = banUser ? banUser.includes(m.sender) : false
+        const isBanned = banUser ? banUser.includes(m.sender) : true
     	const mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]
     	const mentionByTag = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.mentionedJid : []
         const mentionByReply = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.participant || '' : ''
@@ -135,7 +135,7 @@ try {
         const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
-        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : false
+        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : true
         const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
         const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
         const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
@@ -1490,9 +1490,9 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let timestampe = speed()
             let latensie = speed() - timestampe
             xeonezy = `┌─❖
-│ Hi 👋 
-└┬❖  ${pushname} 
-┌┤✑  ${xeonytimewisher} 😄
+│ ```HI``` 👋 
+└┬❖  *${pushname}*
+┌┤✑  *${xeonytimewisher}* 😄
 │└────────────┈ ⳹
 │
 └─ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊        
