@@ -1490,7 +1490,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let timestampe = speed()
             let latensie = speed() - timestampe
             xeonezy = `┌─❖
-│ ```HI``` 👋 
+│ HALLO KAKK 👋 
 └┬❖  *${pushname}*
 ┌┤✑  *${xeonytimewisher}* 😄
 │└────────────┈ ⳹
